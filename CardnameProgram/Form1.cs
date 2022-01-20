@@ -221,5 +221,69 @@ namespace CardnameProgram
             showData();
 
         }
-    }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            string MyConnection2 = "datasource=127.0.0.1;port=3306;username=root;password=ekdnsel;Charset=utf8";
+            //쿼리
+            string Query = "select * from dawoon.dw_persons;";//체크박스를 하면 보여주고 안보이면 안보여주는형식
+            string searchtext = textBoxSearch.Text;
+            string keyText = comboBoxSearch.Text;
+            //키의 텍스트의 검색이 되게
+            //   if(keyText== "이름")
+            if (keyText == "이름")
+            {
+
+                Query = "select * from dawoon.dw_persons WHERE perName like '%" + searchtext + "%';";
+            }
+            else if (keyText == "회사")
+            {
+
+                Query = "select * from dawoon.dw_persons WHERE perComp like '%" + searchtext + "%';";
+            }
+            else if (keyText == "나이")
+            {
+
+                Query = "select * from dawoon.dw_persons WHERE perAge like '%" + searchtext + "%';";
+            }
+            else if (keyText == "직책")
+            {
+
+                Query = "select * from dawoon.dw_persons WHERE perJob like '%" + searchtext + "%';";
+            }
+            else if (keyText == "연락처")
+            {
+
+                Query = "select * from dawoon.dw_persons WHERE perHp like '%" + searchtext + "%';";
+            }
+            else if (keyText == "업무")
+            {
+
+                Query = "select * from dawoon.dw_persons WHERE perTask like '%" + searchtext + "%';";
+            }
+            else if (keyText == "주소")
+            {
+
+                Query = "select * from dawoon.dw_persons WHERE perAddr like '%" + searchtext + "%';";
+            }
+
+
+            MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+            MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
+            //  MyConn2 열어라 
+            //오프라인 연결을 위해서 우리는 MySqlDataAdapter class를 사용할것이다.
+            MySqlDataAdapter MyAdapter = new MySqlDataAdapter();
+            MyAdapter.SelectCommand = MyCommand2;
+            DataTable dTable = new DataTable();
+            MyAdapter.Fill(dTable);
+            dataGridView1.DataSource = dTable;
+            //여기서 나는 data를 보여주기 위해서 dataGridView1 객체를 dTable 객체에 할당한다.
+            // MyConn2를 닫아라
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[dataGridView1.Columns.Count - 4].Visible = false;
+            dataGridView1.Columns[dataGridView1.Columns.Count - 3].Visible = false;
+            dataGridView1.Columns[dataGridView1.Columns.Count - 2].Visible = false;
+            dataGridView1.Columns[dataGridView1.Columns.Count - 1].Visible = false;
+}
+}
 }
