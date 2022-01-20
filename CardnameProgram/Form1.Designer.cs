@@ -40,7 +40,6 @@
             this.textBoxTask = new System.Windows.Forms.TextBox();
             this.labelTel = new System.Windows.Forms.Label();
             this.textBoxTel = new System.Windows.Forms.TextBox();
-            this.checkBoxDelShow = new System.Windows.Forms.CheckBox();
             this.labelComp = new System.Windows.Forms.Label();
             this.labelJob = new System.Windows.Forms.Label();
             this.textBoxJob = new System.Windows.Forms.TextBox();
@@ -55,6 +54,7 @@
             this.comboBoxSearch = new System.Windows.Forms.ComboBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.checkBoxDelShow = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -114,13 +114,13 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.checkBoxDelShow);
             this.panel2.Controls.Add(this.labelAddress);
             this.panel2.Controls.Add(this.textBoxAddress);
             this.panel2.Controls.Add(this.labelTask);
             this.panel2.Controls.Add(this.textBoxTask);
             this.panel2.Controls.Add(this.labelTel);
             this.panel2.Controls.Add(this.textBoxTel);
-            this.panel2.Controls.Add(this.checkBoxDelShow);
             this.panel2.Controls.Add(this.labelName);
             this.panel2.Controls.Add(this.labelComp);
             this.panel2.Controls.Add(this.labelJob);
@@ -187,17 +187,6 @@
             this.textBoxTel.Name = "textBoxTel";
             this.textBoxTel.Size = new System.Drawing.Size(150, 26);
             this.textBoxTel.TabIndex = 11;
-            // 
-            // checkBoxDelShow
-            // 
-            this.checkBoxDelShow.AutoSize = true;
-            this.checkBoxDelShow.Location = new System.Drawing.Point(353, 290);
-            this.checkBoxDelShow.Name = "checkBoxDelShow";
-            this.checkBoxDelShow.Size = new System.Drawing.Size(76, 16);
-            this.checkBoxDelShow.TabIndex = 9;
-            this.checkBoxDelShow.Text = "삭제 보기";
-            this.checkBoxDelShow.UseVisualStyleBackColor = true;
-            this.checkBoxDelShow.CheckedChanged += new System.EventHandler(this.checkBoxDelShow_CheckedChanged);
             // 
             // labelComp
             // 
@@ -342,6 +331,16 @@
             this.textBoxSearch.Size = new System.Drawing.Size(87, 26);
             this.textBoxSearch.TabIndex = 16;
             // 
+            // checkBoxDelShow
+            // 
+            this.checkBoxDelShow.AutoSize = true;
+            this.checkBoxDelShow.Location = new System.Drawing.Point(335, 288);
+            this.checkBoxDelShow.Name = "checkBoxDelShow";
+            this.checkBoxDelShow.Size = new System.Drawing.Size(76, 16);
+            this.checkBoxDelShow.TabIndex = 16;
+            this.checkBoxDelShow.Text = "삭제 보기";
+            this.checkBoxDelShow.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -382,7 +381,6 @@
         private System.Windows.Forms.TextBox textBoxAge;
         private System.Windows.Forms.Label labelJob;
         private System.Windows.Forms.TextBox textBoxJob;
-        private System.Windows.Forms.CheckBox checkBoxDelShow;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonDelete;
@@ -397,6 +395,7 @@
         private System.Windows.Forms.ComboBox comboBoxSearch;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.CheckBox checkBoxDelShow;
     }
 }
 

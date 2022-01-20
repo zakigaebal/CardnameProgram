@@ -156,6 +156,9 @@ namespace CardnameProgram
                 textBoxAge.Text = "";
                 textBoxComp.Text = "";
                 textBoxJob.Text = "";
+                textBoxTel.Text = "";
+                textBoxTask.Text = "";
+                textBoxAddress.Text = "";
 
             }
             catch (Exception ex)
@@ -211,9 +214,9 @@ namespace CardnameProgram
             textBoxComp.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             textBoxAge.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             textBoxJob.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            textBoxJob.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            textBoxJob.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            textBoxJob.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+            textBoxTel.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            textBoxTask.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            textBoxAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -278,12 +281,8 @@ namespace CardnameProgram
             MyAdapter.Fill(dTable);
             dataGridView1.DataSource = dTable;
             //여기서 나는 data를 보여주기 위해서 dataGridView1 객체를 dTable 객체에 할당한다.
-            // MyConn2를 닫아라
-            dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[dataGridView1.Columns.Count - 4].Visible = false;
-            dataGridView1.Columns[dataGridView1.Columns.Count - 3].Visible = false;
-            dataGridView1.Columns[dataGridView1.Columns.Count - 2].Visible = false;
-            dataGridView1.Columns[dataGridView1.Columns.Count - 1].Visible = false;
+          
+           
 }
 }
 }
