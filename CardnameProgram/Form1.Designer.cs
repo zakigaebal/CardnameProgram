@@ -46,6 +46,12 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.labelTel = new System.Windows.Forms.Label();
+            this.textBoxTel = new System.Windows.Forms.TextBox();
+            this.labelTask = new System.Windows.Forms.Label();
+            this.textBoxTask = new System.Windows.Forms.TextBox();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -88,7 +94,7 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.labelName.Location = new System.Drawing.Point(87, 15);
+            this.labelName.Location = new System.Drawing.Point(15, 17);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(42, 21);
             this.labelName.TabIndex = 1;
@@ -97,14 +103,20 @@
             // textBoxName
             // 
             this.textBoxName.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxName.Location = new System.Drawing.Point(163, 15);
+            this.textBoxName.Location = new System.Drawing.Point(70, 17);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(150, 26);
+            this.textBoxName.Size = new System.Drawing.Size(87, 26);
             this.textBoxName.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.labelAddress);
+            this.panel2.Controls.Add(this.textBoxAddress);
+            this.panel2.Controls.Add(this.labelTask);
+            this.panel2.Controls.Add(this.textBoxTask);
+            this.panel2.Controls.Add(this.labelTel);
+            this.panel2.Controls.Add(this.textBoxTel);
             this.panel2.Controls.Add(this.checkBoxDelShow);
             this.panel2.Controls.Add(this.labelName);
             this.panel2.Controls.Add(this.labelComp);
@@ -114,16 +126,16 @@
             this.panel2.Controls.Add(this.textBoxName);
             this.panel2.Controls.Add(this.textBoxAge);
             this.panel2.Controls.Add(this.textBoxComp);
-            this.panel2.Location = new System.Drawing.Point(32, 107);
+            this.panel2.Location = new System.Drawing.Point(32, 108);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(443, 202);
+            this.panel2.Size = new System.Drawing.Size(443, 319);
             this.panel2.TabIndex = 3;
             // 
             // labelComp
             // 
             this.labelComp.AutoSize = true;
             this.labelComp.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.labelComp.Location = new System.Drawing.Point(87, 56);
+            this.labelComp.Location = new System.Drawing.Point(15, 49);
             this.labelComp.Name = "labelComp";
             this.labelComp.Size = new System.Drawing.Size(42, 21);
             this.labelComp.TabIndex = 3;
@@ -132,16 +144,16 @@
             // textBoxComp
             // 
             this.textBoxComp.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxComp.Location = new System.Drawing.Point(163, 56);
+            this.textBoxComp.Location = new System.Drawing.Point(70, 49);
             this.textBoxComp.Name = "textBoxComp";
-            this.textBoxComp.Size = new System.Drawing.Size(150, 26);
+            this.textBoxComp.Size = new System.Drawing.Size(87, 26);
             this.textBoxComp.TabIndex = 4;
             // 
             // labelAge
             // 
             this.labelAge.AutoSize = true;
             this.labelAge.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.labelAge.Location = new System.Drawing.Point(87, 97);
+            this.labelAge.Location = new System.Drawing.Point(15, 81);
             this.labelAge.Name = "labelAge";
             this.labelAge.Size = new System.Drawing.Size(42, 21);
             this.labelAge.TabIndex = 5;
@@ -150,16 +162,16 @@
             // textBoxAge
             // 
             this.textBoxAge.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxAge.Location = new System.Drawing.Point(163, 97);
+            this.textBoxAge.Location = new System.Drawing.Point(70, 81);
             this.textBoxAge.Name = "textBoxAge";
-            this.textBoxAge.Size = new System.Drawing.Size(150, 26);
+            this.textBoxAge.Size = new System.Drawing.Size(87, 26);
             this.textBoxAge.TabIndex = 6;
             // 
             // labelJob
             // 
             this.labelJob.AutoSize = true;
             this.labelJob.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.labelJob.Location = new System.Drawing.Point(87, 143);
+            this.labelJob.Location = new System.Drawing.Point(15, 113);
             this.labelJob.Name = "labelJob";
             this.labelJob.Size = new System.Drawing.Size(42, 21);
             this.labelJob.TabIndex = 7;
@@ -168,15 +180,15 @@
             // textBoxJob
             // 
             this.textBoxJob.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxJob.Location = new System.Drawing.Point(163, 143);
+            this.textBoxJob.Location = new System.Drawing.Point(70, 113);
             this.textBoxJob.Name = "textBoxJob";
-            this.textBoxJob.Size = new System.Drawing.Size(150, 26);
+            this.textBoxJob.Size = new System.Drawing.Size(87, 26);
             this.textBoxJob.TabIndex = 8;
             // 
             // checkBoxDelShow
             // 
             this.checkBoxDelShow.AutoSize = true;
-            this.checkBoxDelShow.Location = new System.Drawing.Point(355, 17);
+            this.checkBoxDelShow.Location = new System.Drawing.Point(353, 290);
             this.checkBoxDelShow.Name = "checkBoxDelShow";
             this.checkBoxDelShow.Size = new System.Drawing.Size(76, 16);
             this.checkBoxDelShow.TabIndex = 9;
@@ -189,16 +201,16 @@
             this.panel3.Controls.Add(this.buttonUpdate);
             this.panel3.Controls.Add(this.buttonDelete);
             this.panel3.Controls.Add(this.buttonSave);
-            this.panel3.Location = new System.Drawing.Point(32, 349);
+            this.panel3.Location = new System.Drawing.Point(93, 433);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(443, 118);
+            this.panel3.Size = new System.Drawing.Size(313, 97);
             this.panel3.TabIndex = 4;
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(77, 14);
+            this.buttonSave.Location = new System.Drawing.Point(9, 16);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(83, 85);
+            this.buttonSave.Size = new System.Drawing.Size(83, 68);
             this.buttonSave.TabIndex = 0;
             this.buttonSave.Text = "저장";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -206,9 +218,9 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(183, 14);
+            this.buttonDelete.Location = new System.Drawing.Point(115, 16);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(83, 85);
+            this.buttonDelete.Size = new System.Drawing.Size(83, 68);
             this.buttonDelete.TabIndex = 1;
             this.buttonDelete.Text = "삭제";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -216,9 +228,9 @@
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(286, 14);
+            this.buttonUpdate.Location = new System.Drawing.Point(218, 16);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(83, 85);
+            this.buttonUpdate.Size = new System.Drawing.Size(83, 68);
             this.buttonUpdate.TabIndex = 2;
             this.buttonUpdate.Text = "수정";
             this.buttonUpdate.UseVisualStyleBackColor = true;
@@ -237,11 +249,65 @@
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // labelTel
+            // 
+            this.labelTel.AutoSize = true;
+            this.labelTel.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelTel.Location = new System.Drawing.Point(186, 113);
+            this.labelTel.Name = "labelTel";
+            this.labelTel.Size = new System.Drawing.Size(58, 21);
+            this.labelTel.TabIndex = 10;
+            this.labelTel.Text = "연락처";
+            // 
+            // textBoxTel
+            // 
+            this.textBoxTel.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBoxTel.Location = new System.Drawing.Point(261, 113);
+            this.textBoxTel.Name = "textBoxTel";
+            this.textBoxTel.Size = new System.Drawing.Size(150, 26);
+            this.textBoxTel.TabIndex = 11;
+            // 
+            // labelTask
+            // 
+            this.labelTask.AutoSize = true;
+            this.labelTask.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelTask.Location = new System.Drawing.Point(15, 163);
+            this.labelTask.Name = "labelTask";
+            this.labelTask.Size = new System.Drawing.Size(42, 21);
+            this.labelTask.TabIndex = 12;
+            this.labelTask.Text = "업무";
+            // 
+            // textBoxTask
+            // 
+            this.textBoxTask.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBoxTask.Location = new System.Drawing.Point(70, 163);
+            this.textBoxTask.Name = "textBoxTask";
+            this.textBoxTask.Size = new System.Drawing.Size(341, 26);
+            this.textBoxTask.TabIndex = 13;
+            // 
+            // labelAddress
+            // 
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelAddress.Location = new System.Drawing.Point(15, 214);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(42, 21);
+            this.labelAddress.TabIndex = 14;
+            this.labelAddress.Text = "주소";
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBoxAddress.Location = new System.Drawing.Point(70, 214);
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(341, 26);
+            this.textBoxAddress.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1299, 535);
+            this.ClientSize = new System.Drawing.Size(1299, 542);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -279,6 +345,12 @@
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label labelTel;
+        private System.Windows.Forms.TextBox textBoxTel;
+        private System.Windows.Forms.Label labelAddress;
+        private System.Windows.Forms.TextBox textBoxAddress;
+        private System.Windows.Forms.Label labelTask;
+        private System.Windows.Forms.TextBox textBoxTask;
     }
 }
 

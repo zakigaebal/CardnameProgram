@@ -105,8 +105,9 @@ namespace CardnameProgram
                 // 이것은 나의 내가 데이터베이스 파일 주소 path에 할당했던 연결 문자열이다.
                 string MyConnection2 = "datasource=127.0.0.1;port=3306;username=root;password=ekdnsel;Charset=utf8";
                 // 이것은 내가 윈도우폼을 통해 유저로부터 받았던 나의 insert 쿼리이다.
-                string Query = "insert into dawoon.dw_persons(perSeq,perName,perComp,perAge,perJob,flagYN,regDate,issueDate,IssueID) values('"
-                    + seqCount() + "','" + this.textBoxName.Text + "','" + this.textBoxComp.Text + "','" + this.textBoxAge.Text + "','" + this.textBoxJob.Text + "','Y',now(),now(),'CDY');";
+                string Query = "insert into dawoon.dw_persons(perSeq,perName,perComp,perAge,perJob,perHp,perTask,perAddr,flagYN,regDate,issueDate,IssueID) values('"
+                    + seqCount() + "','" + this.textBoxName.Text + "','" + this.textBoxComp.Text + "','" + this.textBoxAge.Text + "','" + this.textBoxJob.Text + "','" 
+                    + this.textBoxTel.Text + "','" + this.textBoxTask.Text + "','" + this.textBoxAddress.Text + "','Y',now(),now(),'CDY');";
                 
                 // 이것은 내가 객체와 패스워드를 나의 연결 스트링에 생성했었던 MySqlConnection이다.
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
@@ -116,7 +117,7 @@ namespace CardnameProgram
                 MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();      
                 // 여기서 쿼리를 실행할것이고 데이터를 데이터베이스에 저장할것이다.
-                MessageBox.Show("Save Data");
+                MessageBox.Show("저장완료");
                 while (MyReader2.Read())
                 {
 
@@ -144,7 +145,7 @@ namespace CardnameProgram
                 MySqlDataReader MyReader2;
                 MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
-                MessageBox.Show("Data Deleted");
+                MessageBox.Show("삭제완료");
                 while (MyReader2.Read())
                 {
 
@@ -173,9 +174,11 @@ namespace CardnameProgram
                 // 이것은 나의 내가 데이터베이스 파일 주소 path에 할당했던 연결 문자열이다.
 
                 string MyConnection2 = "datasource=127.0.0.1;port=3306;username=root;password=ekdnsel;Charset=utf8";
-                //This is my update query in which i am taking input from the user through windows forms and update the record.
+              
                 // 이것은 레코드를 업데이트를 할 내가 윈도움폼을 통해 유저로부터 받아왔던 나의 업데이트 쿼리이다 
-                string Query = "update dawoon.dw_persons set perSeq='" + seqstr + "',perName='" + this.textBoxName.Text + "',perComp='" + this.textBoxComp.Text + "',perAge='" + this.textBoxAge.Text + "',perJob='" + this.textBoxJob.Text + "' where perSeq='" + seqstr + "';";
+                string Query = "update dawoon.dw_persons set perSeq='" + seqstr + "',perName='" + this.textBoxName.Text + "',perComp='" + this.textBoxComp.Text + "',perAge='" 
+                    + this.textBoxAge.Text + "',perJob='" + this.textBoxJob.Text + "',perHp='" + this.textBoxTel.Text + "',perTask='" + this.textBoxTask.Text + "',perAddr='" 
+                    + this.textBoxAddress.Text + "' where perSeq='" + seqstr + "';";
                 // 이것은 내가 객체와 패스워드를 나의 연결 스트링에 생성했었던 MySqlConnection이다.
 
                 MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
@@ -183,7 +186,7 @@ namespace CardnameProgram
                 MySqlDataReader MyReader2;
                 MyConn2.Open();
                 MyReader2 = MyCommand2.ExecuteReader();
-                MessageBox.Show("Data Updated");
+                MessageBox.Show("수정완료");
                 while (MyReader2.Read())
                 {
 
@@ -208,6 +211,9 @@ namespace CardnameProgram
             textBoxComp.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             textBoxAge.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             textBoxJob.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            textBoxJob.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            textBoxJob.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            textBoxJob.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
